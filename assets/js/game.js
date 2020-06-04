@@ -1,24 +1,16 @@
 var playerName = window.prompt("What is your robot's name?");
 var playerHealth = 100;
-// check to see if the value of the playerHealth variable is greater than 0
-if (playerHealth > 0) {
-    console.log("Your player is still alive!");
-}
-
 var playerAttack = 10;
 var playerMoney = 10;
 
-// You can also log multiple values at once like this
-console.log(playerName, playerAttack, playerHealth, playerMoney);
-
-var enemyName = "Roborto";
+var enemyNames = ["Roborto", "Amy Android", "Robo Trumble"];
 var enemyHealth = 50;
 var enemyAttack = 12;
 
 // create function
-var fight = function() {
-    // Alert users that they are starting the round
-    window.alert("Welcome to Robot Gladiators!");
+var fight = function(enemyName) {
+    // fight function statements
+
     var promptFight = window.prompt("Would you like to FIGHT or SKIP this battle? Enter 'FIGHT' or 'SKIP' to choose.");
     console.log(promptFight);
     // if player choses to fight, then fight
@@ -72,4 +64,6 @@ var fight = function() {
 };
 
 // execute function
-fight();
+for (var i = 0; i < enemyNames.length; i++) {
+    fight(enemyNames[i]);
+}
